@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Listener Exemple</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<input type="text" id="monChampTexte" placeholder="Tapez quelque chose">
+<button id="monBouton">Cliquez-moi</button>
+
+
+ <script>
+    // Sélectionner le bouton avec son ID
+    const bouton = document.getElementById('monBouton');
+
+    // Ajouter un écouteur d'événement pour le clic
+    bouton.addEventListener('click', function() {
+      console.log('Le bouton a été cliqué !');
+    });
+
+     // Sélectionner l'élément input
+  const champTexte = document.getElementById('monChampTexte');
+
+  // Ajouter un écouteur d'événement pour le changement de texte
+  champTexte.addEventListener('input', function() {
+    console.log('Texte modifié :', champTexte.value);
+  });
+
+function handleClick() {
+  console.log('Clique détecté');
+}
+
+// Ajouter un listener
+button.addEventListener('click', handleClick);
+
+// Supprimer le listener
+button.removeEventListener('click', handleClick);
+
+button.addEventListener('click', function() {
+  console.log('Ce message n\'apparaîtra qu\'une seule fois.');
+}, { once: true });
+
+// Sélectionner un élément par son ID
+const titre = document.getElementById('titre');  // <h1>Bienvenue</h1>
+
+// Sélectionner un élément par sa classe
+const paragraphes = document.getElementsByClassName('paragraphe');  // Collection de tous les <p>
+
+// Sélectionner un élément par sa balise HTML
+const boutons = document.getElementsByTagName('button');  // Collection de tous les <button>
+
+// Modifier le texte d'un élément
+const titre = document.getElementById('titre');
+titre.textContent = "Nouveau Titre !";
+
+// Modifier un style CSS
+const bouton = document.getElementById('monBouton');
+bouton.style.backgroundColor = "blue";  // Change la couleur de fond du bouton
+
+// Créer un nouveau paragraphe
+const nouveauParagraphe = document.createElement('p');
+nouveauParagraphe.textContent = "Voici un nouveau paragraphe ajouté via JavaScript.";
+
+// Ajouter ce paragraphe à la page (par exemple dans <body>)
+document.body.appendChild(nouveauParagraphe);
+
+// Supprimer un élément
+const bouton = document.getElementById('monBouton');
+bouton.remove();  // Le bouton sera supprimé de la page
+
+const bouton = document.getElementById('monBouton');
+
+// Lier un événement "click" au bouton
+bouton.addEventListener('click', function() {
+  alert('Vous avez cliqué sur le bouton !');
+});
+
+// Sélectionner le bouton
+const bouton = document.getElementById('monBouton');
+
+// Ajouter un événement au clic
+bouton.addEventListener('click', function() {
+  // Ajouter une classe pour l'animation de secousse
+  bouton.classList.add('secouer');
+
+  // Retirer la classe après l'animation
+  setTimeout(function() {
+    bouton.classList.remove('secouer');
+  }, 300);  // Durée de l'animation (300ms)
+});
+
+// Sélectionner le bouton
+const bouton = document.getElementById('monBouton');
+
+// Ajouter un événement au clic
+bouton.addEventListener('click', function() {
+  // Ajouter une classe pour l'animation de secousse
+  bouton.classList.add('secouer');
+
+  // Retirer la classe après l'animation
+  setTimeout(function() {
+    bouton.classList.remove('secouer');
+  }, 300);  // Durée de l'animation (300ms)
+});
+
+// Sélectionner le bouton
+const bouton = document.getElementById('monBouton');
+
+// Ajouter un événement au clic
+bouton.addEventListener('click', function() {
+  // Ajouter une classe pour l'animation de secousse
+  bouton.classList.add('secouer');
+
+  // Retirer la classe après l'animation
+  setTimeout(function() {
+    bouton.classList.remove('secouer');
+  }, 300);  // Durée de l'animation (300ms)
+});
+
+
+  </script>
+</body>
+</html>
